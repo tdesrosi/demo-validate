@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - hpa.yaml
+
+commonLabels:
+  owner: "Thomas"
