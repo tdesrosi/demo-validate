@@ -168,16 +168,13 @@ else
 	OSS=FALSE
 	mkdir .temp
 	mv constraints-and-templates/oss-constraint-templates-library .temp
-
 	# Constraints and templates in same location
 	if [[ "$TEMPLATES_LOCATION" == "$CONSTRAINTS_LOCATION" ]]; then
 		download_policies $CONSTRAINTS_LOCATION ""
-
 	# Constraints and templates in different locations
 	else
 		download_policies $CONSTRAINTS_LOCATION "constraints"
 		download_policies $TEMPLATES_LOCATION "templates"
-
 	fi
 fi
 
